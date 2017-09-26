@@ -1,0 +1,27 @@
+.catalog:
+  name: "NewRelic Infrastructure Client"
+  version: "0.0.6-rancher1"
+  description: "NewRelic Infrastructure Client"
+  questions:
+    - variable: "NRIA_LICENSE_KEY"
+      label: "NewRelic License Key"
+      description: "License key for NewRelic"
+      type: "string"
+      required: true
+    - variable: "NRIA_CUSTOM_ATTRIBUTES"
+      label: "Custom Attributes"
+      description: "Custom attributes are key-value pairs used to annotate the data from the infrastructure agent"
+      type: "string"
+      required: false
+    - variable: "NRIA_VERBOSE"
+      label: "Verbose Logging"
+      description: "For verbose logging set value to 1"
+      type: "int"
+      default: 0
+      required: false
+    - variable: "NRIA_PROXY"
+      label: "Proxy"
+      description: "Proxy URL if required to communicate with NewRelic"
+      type: "string"
+      required: false
+      

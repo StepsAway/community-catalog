@@ -1,0 +1,7 @@
+name: NewRelic Infra
+description: |
+  NewRelic Infrastructure Client
+version: 0.0.6-rancher1
+category: Monitoring
+labels:
+  io.rancher.orchestration.supported: 'cattle,mesos,swarm,kubernetes'
