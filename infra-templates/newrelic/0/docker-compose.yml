@@ -1,0 +1,19 @@
+version: '2'
+services:
+  newrelic-infra:
+    image: newrelic/infrastructure:0.0.6
+    cap_add: 
+    - SYS_PTRACE
+    environment:
+      NRIA_LICENSE_KEY: ${NRIA_LICENSE_KEY}
+      NRIA_CUSTOM_ATTRIBUTES: ${NRIA_CUSTOM_ATTRIBUTES}
+      NRIA_VERBOSE: ${NRIA_VERBOSE}
+      NRIA_PROXY: ${NRIA_PROXY}
+    labels:
+      io.rancher.container.hostname_override: container_name
+      io.rancher.container.pull_image: always
+      io.rancher.scheduler.global: 'true'
+    network_mode: host
+    volumes:
+    - /:/host:ro
+    - /var/run/docker.sock:/var/run/docker.sock
